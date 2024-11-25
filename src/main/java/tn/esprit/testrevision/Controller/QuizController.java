@@ -16,5 +16,10 @@ public class QuizController {
     public Quiz ajouterQuiz(@RequestBody Quiz quiz) {
         return quizService.ajouterQuiz(quiz);
     }
+
+    @PostMapping("/affecter/{titreQuiz}/{idCandidat}")
+    public Quiz affecterQuizCandidat(@PathVariable String titreQuiz, @PathVariable Integer idCandidat) {
+        return quizService.affecterQuizCandidat(titreQuiz, idCandidat);
+    }
 }
 
